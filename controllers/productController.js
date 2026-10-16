@@ -33,13 +33,14 @@ const UpdateProduct=async(req,res)=>{
             product.description = req.body.description
             product.quantity = req.body.quantity 
             await product.save()
-
+    res.json({message:"product delete successfully",product},product)
 
       } 
       catch(error){
         console.log(error.message)
       }
-} 
+}  
+
 
 
 const DeleteProduct=async(req,res)=>{
@@ -49,10 +50,12 @@ const DeleteProduct=async(req,res)=>{
         if(!product){
              console.log("product not found")
         } 
+        res.json({message:"product delete successfully",product},product) 
      } 
      catch(error){
          console.log(error.message)
-     }
+     } 
+    
 }
 
 

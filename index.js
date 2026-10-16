@@ -9,7 +9,7 @@ const app = express()
 app.use(express.json()) 
 
 DbConnect()
-const port = process.env.PORT  
+const port = process.env.port  
 
 app.use('/',route)
 
